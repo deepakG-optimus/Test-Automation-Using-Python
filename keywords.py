@@ -26,15 +26,20 @@ class KeyWord:
             hindi_Link.click()
         except Exception as inst:
             print inst
-    def click_by_id(self,driver):
+    def click_by_id(self,driver,Id):
         try:
-            search_Field = driver.find_element_by_id(testData.search_field)
+            search_Field = driver.find_element_by_id(Id)
             search_Field.click()
             search_Field.send_keys(testData.search_data)
         except Exception as inst:
             print inst
-    def open_browser(self,driver):
+    def send_key(self,driver,data):
         try:
-            driver.get(testData.flipkart_Url)
+            search_Field.send_keys(data)
+        except Exception as inst:
+            print inst
+    def open_browser(self,driver,Url):
+        try:
+            driver.get(Url)
         except Exception as inst:
             print inst
