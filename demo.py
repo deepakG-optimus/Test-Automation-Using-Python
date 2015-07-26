@@ -1,6 +1,5 @@
 import unittest
 import keywords
-import testData
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 class testcases(unittest.TestCase):
@@ -9,9 +8,8 @@ class testcases(unittest.TestCase):
         abc.driver = webdriver.Firefox()
     def test_case1(abc):
         driver = abc.driver
-        data.open_browser(driver,testData.flipkart_Url)
-        data.click_by_id(driver,testData.search_field)
-        data.send_key(driver,testData.search_data)
+        data.open_browser(driver)
+        data.click_by_id(driver)
     def tearDown(abc):
         abc.driver.close()
 if __name__ == "__main__":
